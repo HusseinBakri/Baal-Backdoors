@@ -1,7 +1,7 @@
 # Baal-Backdoor
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-372/)
 
-Baal is set of backdoors written in Python. This is an ethical hacker educational tool used for educational purposes only (please see code of conduct). Baal backdoors range from simple reverse shell backdoor to more complex ones.
+Baal is set of backdoors creators (i.e. factories) written in Python. This is an ethical hacker educational tool used for educational purposes only. Kindly check the code of conduct. Baal backdoors range from simple reverse shell backdoor to more complex ones.
 
 The tool is part of an ethical hacking educational toolset which is normally taught in ethical hacking and computer security degrees or courses (please see code of conduct). 
 
@@ -20,7 +20,28 @@ Baal is part of a toolset of ethical hacking tools that I will publish gradually
 **Launching this tool against unauthorised and unwilling users is both immoral and illegal. As a white hat hacker or security specialist, your job after taking permission, is to discover vulnerabilities in programs, systems and networks (white hat hacking) or help in discovering any gullibility in users (by social engineering). Thus, you can launch Baal or any other tool I might publish later in this hacking series only when you are given explicit permission by the company that hires you or you only launch it against your own servers or networks. This tool is written after taking several Ethical Hacking and Security courses. So, in other words, the code, which has a generated executable intentionally detectable by antiviruses, can be found in a form or another in many ethical hacking books and courses. I have added some enhancements on the tool of course. To reiterate: This is a tool written for the sole purpose of teaching you how backdoors work and it also shows you how much it is easy to write a simple, effective and yet powerful backdoors in Python. This tool is for educational purposes only and it is not meant to be used in any harmful way. To reiterate, this tool is meant to be a tool to be studied by white hat hackers and security specialists and is not meant to be deployed or used against users that do not give you explicit permission.**
 
 # Description
-Baal constitutes of
+Baal repository constitutes many backdoors (more will uploaded in the future). It is kind of a factory of backdoors. 
+It generates a .py backdoors and coreesponding executables depending on the operating system you are using. This tool requires **pyinstaller** to be installed on the target system. netcat.py is a basic Python implementation of netcat in case using netcat itself is difficult in your situation.
+
+## Tool 1: Baal_Simple_Backdoor_Creator.py
+The usage of the Baal Simple Backdoor Creator can be invoked via a -h switch.
+
+### Usage the simplae backdoor without command line parameters:
+```
+python Baal_Simple_Backdoor_Creator.py  or ./Baal_Simple_Backdoor_Creator.py 
+```
+This will make the tool detect the IP of your machine (i.e IP of the attacker and will use the default port 2233. If you want to use another, please change accordingly. Baal_Simple_Backdoor_Creator.py in the current version use netcat and create a netcat listener on port 2233. The same commands you would use manually on a cmd/terminal:
+On Linux, listening on port 2233 for connections 
+```
+nc -lp 2233
+```
+On MacOS, listening on port 2233 for connections 
+```
+nc -l -p 2233
+```
+on Windows: To the best of my knowledge there is no built in netcat so you can use Jon Craton Tool is used: https://joncraton.org/blog/46/netcat-for-windows/. The Baal_Simple_Backdoor_Creator.py uses Jon Craton nc.exe found in the netcat_executables of this repo.
+
+The Baal Simple Backdoor Creator will generate a python backdoor i.e. a simple backdoor with .py extension. The file will be named by default baal_s.py and will also generate an executable which you can be found in the dist folder. The generated backdoor is automatically configured to connect back (i.e. reverse connect) to the attackers IP.
 
 # Requirements
 You need to install all the Python libraries modules need by the tools. You can install them by using pip3 or any other method that you are confortable with. If you wil be using pip, check first that you have the latest version of pip and setuptools & then install library in question
@@ -30,6 +51,12 @@ pip install --upgrade pip setuptools
 # example statsmodels
 pip install --upgrade statsmodels
 ```
+For example to install wget:  
+```
+pip install wget
+```
+
+Use the generated backdoors as packaged executables for your OS: Mac OS, Linux and MS Windows. Consider using additional obfuscation techniques.
 
 ## Usage 
 ## Irrealistic usage (educational)
