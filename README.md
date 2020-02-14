@@ -1,4 +1,4 @@
-# Baal-Backdoor
+# Baal Backdoors Creators
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-372/)
 
 Baal is set of backdoors creators (i.e. factories) written in Python. This is an ethical hacker educational tool used for educational purposes only. Kindly check the code of conduct. Baal backdoors range from simple reverse shell backdoor to more complex ones.
