@@ -54,10 +54,22 @@ Use the generated backdoors as packaged executables for your OS: Mac OS, Linux a
 
 ## Usage 
 ## Irrealistic usage (educational)
+Change Backdoor_Python_FILE to the specific backdoor you want to use. To run the tool in the foreground:
+```
+python Backdoor_Python_FILE.py 
+```
+To run the tool in the background on Linux or MacOS:
 
 ```
-python Backdoor_Python_FILE 
+python Backdoor_Python_FILE.py &
 ```
+On MS Windows: you can run the tool in the background without showing a terminal/console by using pythonw.exe instead of python.exe. You can change the extension from .py to .pyw if you want.
+
+```
+pythonw Backdoor_Python_FILE.pyw
+```
+A better way to hide the terminal/console is elucidated in the Packaging section. The section details how to create an executable out of Baal Backdoors.
+
 ## Deployment Usage
 You need to create an executable out of the backdoor in question. Kindly check the Packaging section.
 
